@@ -5,16 +5,6 @@
 
 import SwiftUI
 
-class MessageViewModel: ObservableObject, Identifiable {
-    var id: String = UUID().uuidString
-
-    var text: String
-
-    init(text: String) {
-        self.text = text
-    }
-}
-
 struct MessageView: View {
     @ObservedObject var message: MessageViewModel
 

@@ -13,4 +13,9 @@ class DialogViewModel: ObservableObject {
 
         self.messages = messages.map { MessageViewModel(text: $0) }
     }
+
+    init(messages: [MessageViewModel]) {
+
+        self.messages = messages
+    }
 }

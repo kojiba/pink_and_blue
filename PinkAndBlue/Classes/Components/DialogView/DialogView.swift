@@ -6,7 +6,7 @@
 import SwiftUI
 
 struct DialogView: View {
-    @ObservedObject var dialogViewModel = DialogViewModel(messages: [])
+    @ObservedObject var dialogViewModel: DialogViewModel
 
     var body: some View {
 
@@ -14,7 +14,11 @@ struct DialogView: View {
 
             ForEach(self.dialogViewModel.messages) { message in
 
-                MessageView(message: message)
+                if message.isOption {
+                    OptionMessageButton(message: message)
+                } else {
+                    MessageView(message: message)
+                }
             }
         }
     }
@@ -23,9 +27,12 @@ struct DialogView: View {
 struct DialogView_Previews: PreviewProvider {
     static var previews: some View {
         DialogView(dialogViewModel: DialogViewModel(messages:
-        ["Hi and welcome", 
-         "This is a second message, should be multiline",
-         "Third message one"
+        [.message("Hi and welcome"),
+         .message("This is a second message, should be multiline"),
+         .message("Third message one"),
+         .option("Option one"),
+         .option("Option two"),
+         .option("Option three")
         ]
         ))
     }
