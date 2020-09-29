@@ -31,9 +31,9 @@ struct OptionMessageButton: View {
 struct OptionMessageButton_Previews: PreviewProvider {
     static var previews: some View {
         VStack {
-            OptionMessageButton(message: MessageViewModel(option: "Option #1"))
-            OptionMessageButton(message: MessageViewModel(option: "Option two"))
-            OptionMessageButton(message: MessageViewModel(option: "Option three and possibly a big one multiline option here for previews"))
+            OptionMessageButton(message: .option("Option #1"))
+            OptionMessageButton(message: .option("Option two"))
+            OptionMessageButton(message: .option("Option three and possibly a big one multiline option here for previews"))
 
         }
     }

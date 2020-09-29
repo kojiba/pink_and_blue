@@ -20,21 +20,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         // Create the SwiftUI view that provides the window contents.
-
-        let model = DialogViewModel(messages: [.message("Hi and welcome to Breast Cancer Journey Companion."),
-                                               .message("""
-                                                        We want to provide you with a 24/7 
-                                                        community of survivors at different stages 
-                                                        in their journey to support you along yours. 
-                                                        """),
-                                               .message("Now let’s get you connected!"),
-                                               
-                                               .option("Option one"),
-                                               .option("Option two"),
-                                               .option("Option three")
-        ])
-
-        let view =  DialogView(dialogViewModel: model)
+        let view = OnboardingView()
 
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {

@@ -22,10 +22,10 @@ class MessageViewModel: ObservableObject, Identifiable {
     }
 
     static func message(_ text: String) -> MessageViewModel {
-        MessageViewModel(text: text, isOption: true)
+        MessageViewModel(text: text, isOption: false)
     }
 
     static func option(_ text: String, action: Action? = nil) -> MessageViewModel {
-        MessageViewModel(text: text, isOption: false)
+        MessageViewModel(text: text, isOption: true)
     }
 }

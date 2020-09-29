@@ -7,12 +7,7 @@ import Foundation
 
 class DialogViewModel: ObservableObject {
 
-    var messages: [MessageViewModel]
-
-    init(messages: [String]) {
-
-        self.messages = messages.map { MessageViewModel(text: $0) }
-    }
+    @Published var messages: [MessageViewModel]
 
     init(messages: [MessageViewModel]) {
 
