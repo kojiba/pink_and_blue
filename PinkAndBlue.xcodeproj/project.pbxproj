@@ -18,6 +18,7 @@
 		BCE48713CD5DD7CBEF1D806C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4895119EB02B39A5F916C /* MessageViewModel.swift */; };
 		BCE487DA58A148E2AF059106 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48D8E23F82438E00BBD4B /* ErrorText.swift */; };
 		BCE489B6CB2D8A6949F29543 /* DialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E84E3702408A76A7AF2 /* DialogViewModel.swift */; };
+		BCE489D24B4232508492E47A /* ChatItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE486850841E48087452FF1 /* ChatItemView.swift */; };
 		BCE48AB195D76E788F9C5582 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE486237FF5D82A13539BA0 /* LoginView.swift */; };
 		BCE48B4EFB0289AA87BB06E4 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE480033962C1B9FDDFBDFB /* DialogView.swift */; };
 		BCE48BF005301D9788DE0165 /* CGFloat+Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE481F71D3C6D0DA298A85F /* CGFloat+Dimensions.swift */; };
@@ -49,6 +50,7 @@
 		BCE4846E5D95BC231C03581C /* ChatListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		BCE48617C46630D90396E621 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		BCE486237FF5D82A13539BA0 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BCE486850841E48087452FF1 /* ChatItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItemView.swift; sourceTree = "<group>"; };
 		BCE4874E5326B25D2A0E705A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE4895119EB02B39A5F916C /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
 		BCE4899A822789C1BDA3654C /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
@@ -137,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				BCE4846E5D95BC231C03581C /* ChatListView.swift */,
+				BCE486850841E48087452FF1 /* ChatItemView.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				BCE4868655DE74A7F404473E /* OptionMessageButton.swift in Sources */,
 				BCE48713CD5DD7CBEF1D806C /* MessageViewModel.swift in Sources */,
 				BCE481BC98F1167061375BDD /* OnboardingView.swift in Sources */,
+				BCE489D24B4232508492E47A /* ChatItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

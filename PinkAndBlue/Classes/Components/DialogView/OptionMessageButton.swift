@@ -23,7 +23,7 @@ struct OptionMessageButton: View {
     }
 
     func optionClicked() {
-
+        message.action?(message)
     }
 }
 

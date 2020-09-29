@@ -7,20 +7,29 @@ import SwiftUI
 
 struct OnboardingView: View {
 
+    @State var isShowingChats = false
     @ObservedObject var dialogViewModel = DialogViewModel(messages: [])
 
     let animationTime = 0.2
 
     var body: some View {
-        VStack {
-            DialogView(viewModel: dialogViewModel)
+        NavigationView {
+            VStack {
+                DialogView(viewModel: dialogViewModel)
+
+                NavigationLink(destination: ChatListView(), isActive: $isShowingChats) { EmptyView() }
+            }
+                .onAppear(perform: onAppear)
         }
-            .onAppear(perform: onAppear)
     }
 
     private func onAppear() {
-        DispatchQueue.global().async {
 
+        if self.dialogViewModel.messages.count > 0 {
+            return
+        }
+
+        DispatchQueue.global().async {
             self.addMessageInMain(.message("Hi and welcome to Breast Cancer Journey Companion."))
             sleep(1)
 
@@ -33,7 +42,11 @@ struct OnboardingView: View {
             self.addMessageInMain(.message("Now let’s get you connected!"))
 
             sleep(1)
-            self.addMessagesInMain([.option("Option one"), .option("Option two"), .option("Option three")])
+            self.addMessagesInMain([
+                .option("Option one", action: self.showChats), 
+                .option("Option two", action: self.showChats), 
+                .option("Option three", action: self.showChats)
+            ])
 
         }
     }
@@ -53,5 +66,9 @@ struct OnboardingView: View {
                 self.dialogViewModel.messages.append(contentsOf: messages)
             }
         }
+    }
+
+    private func showChats(_: MessageViewModel) {
+        self.isShowingChats = true
     }
 }
