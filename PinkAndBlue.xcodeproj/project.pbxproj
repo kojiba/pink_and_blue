@@ -10,19 +10,17 @@
 		BCE4804BA96FFF8073F5F5E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4839EB1F176B35B57792B /* AppDelegate.swift */; };
 		BCE483DBB25399EB31D79DE2 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48D628B15B7F4DD45EC22 /* InputField.swift */; };
 		BCE483E569A0F2B53427C702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE48EED6D8172E86C0A835C /* LaunchScreen.storyboard */; };
-		BCE48417D5B05A9F86B30597 /* View+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48D4707B31B505999F14E /* View+LoadingView.swift */; };
 		BCE484846BCC956414FE690D /* View+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48C5CACACA0A004A5BF07 /* View+LoadingView.swift */; };
 		BCE485740D4FF0A283F34891 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48617C46630D90396E621 /* Mocks.swift */; };
 		BCE487DA58A148E2AF059106 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48D8E23F82438E00BBD4B /* ErrorText.swift */; };
-		BCE48990CFCB24ED3AB1B3D0 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E337330EF55192014B0 /* InputField.swift */; };
 		BCE4899D0D4D823546FAB8DC /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48AE660EBBB8B42926C1D /* ContentView.swift */; };
 		BCE489B6CB2D8A6949F29543 /* DialogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E84E3702408A76A7AF2 /* DialogViewModel.swift */; };
 		BCE48AB195D76E788F9C5582 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE486237FF5D82A13539BA0 /* LoginView.swift */; };
 		BCE48B4EFB0289AA87BB06E4 /* DialogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE480033962C1B9FDDFBDFB /* DialogView.swift */; };
-		BCE48BCF63FAC4C219882C83 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE484EFB29F80BC4255B123 /* ErrorText.swift */; };
 		BCE48BF005301D9788DE0165 /* CGFloat+Dimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE481F71D3C6D0DA298A85F /* CGFloat+Dimensions.swift */; };
+		BCE48C255EC80E0F52B12DE9 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE481E34B2C195FBE4F83A0 /* MessageView.swift */; };
 		BCE48C4C3F34F485380432B6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BCE4874E5326B25D2A0E705A /* Assets.xcassets */; };
-		BCE48DC0E6EC7BBB023643E4 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48E15A1C6EDCD133334DE /* Mocks.swift */; };
+		BCE48C9EDD5024D4CCAF25A6 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48F31F012EBB48748C6E7 /* Colors.swift */; };
 		BCE48DCA411446F74773A7CE /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4899A822789C1BDA3654C /* Network.swift */; };
 		BCE48EC6B61D0B5D08822D31 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48DAD9B50A9290E27B3E6 /* SceneDelegate.swift */; };
 		FB1426152523392B00E45425 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FB1426142523392B00E45425 /* Preview Assets.xcassets */; };
@@ -41,9 +39,9 @@
 
 /* Begin PBXFileReference section */
 		BCE480033962C1B9FDDFBDFB /* DialogView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogView.swift; sourceTree = "<group>"; };
+		BCE481E34B2C195FBE4F83A0 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		BCE481F71D3C6D0DA298A85F /* CGFloat+Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Dimensions.swift"; sourceTree = "<group>"; };
 		BCE4839EB1F176B35B57792B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		BCE484EFB29F80BC4255B123 /* ErrorText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
 		BCE48617C46630D90396E621 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		BCE486237FF5D82A13539BA0 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BCE4874E5326B25D2A0E705A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,14 +49,12 @@
 		BCE489CAE09538342342C03F /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.info; path = Info.plist; sourceTree = "<group>"; };
 		BCE48AE660EBBB8B42926C1D /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BCE48C5CACACA0A004A5BF07 /* View+LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+LoadingView.swift"; sourceTree = "<group>"; };
-		BCE48D4707B31B505999F14E /* View+LoadingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "View+LoadingView.swift"; sourceTree = "<group>"; };
 		BCE48D628B15B7F4DD45EC22 /* InputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		BCE48D8E23F82438E00BBD4B /* ErrorText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorText.swift; sourceTree = "<group>"; };
 		BCE48DAD9B50A9290E27B3E6 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		BCE48E15A1C6EDCD133334DE /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
-		BCE48E337330EF55192014B0 /* InputField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		BCE48E84E3702408A76A7AF2 /* DialogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogViewModel.swift; sourceTree = "<group>"; };
 		BCE48EED6D8172E86C0A835C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BCE48F31F012EBB48748C6E7 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		FB1426082523392800E45425 /* PinkAndBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinkAndBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1426142523392B00E45425 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB14261E2523392B00E45425 /* PinkAndBlueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinkAndBlueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -89,6 +85,7 @@
 			children = (
 				BCE480033962C1B9FDDFBDFB /* DialogView.swift */,
 				BCE48E84E3702408A76A7AF2 /* DialogViewModel.swift */,
+				BCE481E34B2C195FBE4F83A0 /* MessageView.swift */,
 			);
 			path = DialogView;
 			sourceTree = "<group>";
@@ -118,12 +115,12 @@
 		BCE482A02A510C6AD916306E /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				BCE48E15A1C6EDCD133334DE /* Mocks.swift */,
 				BCE48D8E23F82438E00BBD4B /* ErrorText.swift */,
 				BCE48D628B15B7F4DD45EC22 /* InputField.swift */,
 				BCE48C5CACACA0A004A5BF07 /* View+LoadingView.swift */,
 				BCE481F71D3C6D0DA298A85F /* CGFloat+Dimensions.swift */,
 				BCE4802C911163AC904C9F27 /* DialogView */,
+				BCE48F31F012EBB48748C6E7 /* Colors.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -142,9 +139,6 @@
 			children = (
 				BCE48617C46630D90396E621 /* Mocks.swift */,
 				BCE4899A822789C1BDA3654C /* Network.swift */,
-				BCE484EFB29F80BC4255B123 /* ErrorText.swift */,
-				BCE48E337330EF55192014B0 /* InputField.swift */,
-				BCE48D4707B31B505999F14E /* View+LoadingView.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -307,18 +301,16 @@
 				BCE48EC6B61D0B5D08822D31 /* SceneDelegate.swift in Sources */,
 				BCE4804BA96FFF8073F5F5E4 /* AppDelegate.swift in Sources */,
 				BCE48AB195D76E788F9C5582 /* LoginView.swift in Sources */,
-				BCE48DC0E6EC7BBB023643E4 /* Mocks.swift in Sources */,
 				BCE487DA58A148E2AF059106 /* ErrorText.swift in Sources */,
 				BCE483DBB25399EB31D79DE2 /* InputField.swift in Sources */,
 				BCE484846BCC956414FE690D /* View+LoadingView.swift in Sources */,
 				BCE485740D4FF0A283F34891 /* Mocks.swift in Sources */,
 				BCE48DCA411446F74773A7CE /* Network.swift in Sources */,
-				BCE48BCF63FAC4C219882C83 /* ErrorText.swift in Sources */,
-				BCE48990CFCB24ED3AB1B3D0 /* InputField.swift in Sources */,
-				BCE48417D5B05A9F86B30597 /* View+LoadingView.swift in Sources */,
 				BCE48BF005301D9788DE0165 /* CGFloat+Dimensions.swift in Sources */,
 				BCE48B4EFB0289AA87BB06E4 /* DialogView.swift in Sources */,
 				BCE489B6CB2D8A6949F29543 /* DialogViewModel.swift in Sources */,
+				BCE48C255EC80E0F52B12DE9 /* MessageView.swift in Sources */,
+				BCE48C9EDD5024D4CCAF25A6 /* Colors.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,7 +455,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PinkAndBlue/Preview Content\"";
 				DEVELOPMENT_TEAM = D723WN4M5D;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PinkAndBlue/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PinkAndBlue/Classes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -483,7 +475,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"PinkAndBlue/Preview Content\"";
 				DEVELOPMENT_TEAM = D723WN4M5D;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = PinkAndBlue/Info.plist;
+				INFOPLIST_FILE = "$(SRCROOT)/PinkAndBlue/Classes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

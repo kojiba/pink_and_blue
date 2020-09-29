@@ -32,7 +32,7 @@ struct LoginView: View {
     }
 
     private var defaultView: some View {
-        VStack(spacing: spacing) {
+        VStack(spacing: .spacing) {
             InputField(placeholder: "Email", text: $email)
             InputField(placeholder: "Password", text: $password, isSecureField: true)
 
@@ -61,12 +61,6 @@ struct LoginView: View {
 
         isLoading = true
 
-        network.login(email: email, password: password) { result in
-            self.isLoading = false
-
-            self.clearCreds()
-            self.navigatingHome = result
-        }
     }
 
     private func signUpClicked() {

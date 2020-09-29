@@ -5,6 +5,12 @@
 
 import Foundation
 
-class DialogViewModel {
+class DialogViewModel: ObservableObject {
 
+    var messages: [MessageViewModel]
+
+    init(messages: [String]) {
+
+        self.messages = messages.map { MessageViewModel(text: $0) }
+    }
 }
