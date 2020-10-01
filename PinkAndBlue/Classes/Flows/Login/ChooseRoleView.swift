@@ -6,19 +6,23 @@
 import SwiftUI
 
 struct ChooseRoleView: View {
-
-    @State var isShowingChats = false
+    
     @ObservedObject var dialogViewModel = DialogViewModel(messages: [])
+
+    @State private var isNavigatingNext = false
 
     let animationTime = 0.2
 
     var body: some View {
-        NavigationView {
-            VStack {
-                DialogView(viewModel: dialogViewModel)
+        VStack {
+            DialogView(viewModel: dialogViewModel)
+
+            NavigationLink(destination: ChooseTypeView(), isActive: $isNavigatingNext) {
+                EmptyView()
             }
-                .onAppear(perform: onAppear)
         }
+            .navigationBarTitle("Choose Role", displayMode: .inline)
+            .onAppear(perform: onAppear)
     }
     
     private func onAppear() {
@@ -28,37 +32,21 @@ struct ChooseRoleView: View {
         }
 
         DispatchQueue.global().async {
-            self.addMessageInMain(.message("How are you related to the breast cancer?"))
+            self.dialogViewModel.addMessageAsyncAnimated(.message("How are you related to the breast cancer?"))
             
             sleep(1)
-            self.addMessagesInMain([
+            self.self.dialogViewModel.add(messages: [
                 .option("I was recently diagnosed", action: self.showChats),
                 .option("Someone I love has breast cancer/I’m a caregiver", action: self.showChats),
                 .option("I have been living with breast cancer", action: self.showChats),
                 .option("My cancer is in remission", action: self.showChats)
-            ])
+            ],
+                async: true)
 
-        }
-    }
-
-    private func addMessageInMain(_ message: MessageViewModel) {
-        DispatchQueue.main.async {
-
-            withAnimation(.easeInOut(duration: self.animationTime)) {
-                self.dialogViewModel.messages.append(message)
-            }
-        }
-    }
-
-    private func addMessagesInMain(_ messages: [MessageViewModel]) {
-        DispatchQueue.main.async {
-            withAnimation(.easeInOut(duration: self.animationTime)) {
-                self.dialogViewModel.messages.append(contentsOf: messages)
-            }
         }
     }
 
     private func showChats(_: MessageViewModel) {
-        self.isShowingChats = true
+        self.isNavigatingNext = true
     }
 }

@@ -88,5 +88,6 @@ struct ChatListView: View {
                 }
             }
         }
+            .navigationBarTitle("Suggested Groups", displayMode: .inline)
     }
 }

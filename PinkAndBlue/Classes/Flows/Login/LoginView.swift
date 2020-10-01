@@ -1,11 +1,7 @@
-//
-//
-//
 
 import SwiftUI
 
 struct LoginView: View {
-    var isPreview = false
 
     @State private var email = ""
     @State private var password = ""
@@ -46,28 +42,17 @@ struct LoginView: View {
         }
     }
 
-    /// Actions
-
     private func loginButtonClicked() {
         error = validate()
         if !error.isEmpty {
             return
         }
 
-        if isPreview {
-            navigatingHome = true
-            return
-        }
-
-        isLoading = true
-
     }
 
     private func signUpClicked() {
         navigatingSignUp = true
     }
-
-    /// Logic
 
     private func clearCreds() {
         self.email = ""
@@ -83,11 +68,5 @@ struct LoginView: View {
         }
 
         return ""
-    }
-}
-
-struct Login_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView(isPreview: true)
     }
 }

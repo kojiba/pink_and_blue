@@ -9,7 +9,7 @@ struct RoundedButton: View {
 
     var title: String
     var background: Color
-    var action: (()->Void)?
+    var action: (() -> Void)?
 
     var body: some View {
         Button(action: { self.action?() }) {
@@ -30,10 +30,10 @@ struct RoundedButton: View {
 
 struct LoginOptionsView: View {
 
-    var facebook: (()->Void)?
-    var twitter: (()->Void)?
-    var signInUp: (()->Void)?
-    
+    var facebook: (() -> Void)?
+    var twitter: (() -> Void)?
+    var signInUp: (() -> Void)?
+
     var body: some View {
         VStack {
             VStack(spacing: .spacing) {

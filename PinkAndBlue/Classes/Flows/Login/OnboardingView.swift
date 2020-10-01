@@ -7,12 +7,15 @@ import SwiftUI
 
 struct OnboardingView: View {
 
-    @State var isShowingChats = false
-    @State var isShowingLoginOptionsView = false
-
     @ObservedObject var dialogViewModel = DialogViewModel(messages: [])
+    
+    @State private var isShowingLoginOptionsView = false
 
     let animationTime = 0.2
+
+    @State private var isNavigatingLogin = false
+    @State private var isNavigatingChooseRole = false
+    @State private var isNavigatingChats = false
 
     var body: some View {
         NavigationView {
@@ -24,16 +27,20 @@ struct OnboardingView: View {
                     VStack {
                         Spacer(minLength: .spacing)
 
-                        LoginOptionsView(facebook: {},
-                            twitter: {},
-                            signInUp: {})
+                        LoginOptionsView(facebook: navigateChooseRole,
+                            twitter: navigateChooseRole,
+                            signInUp: { self.isNavigatingLogin = true })
                     }
                         .transition(.move(edge: .bottom))
                 }
 
-                NavigationLink(destination: ChatListView(), isActive: $isShowingChats) { EmptyView() }
+                NavigationLink(destination: LoginView(), isActive: $isNavigatingLogin) { EmptyView() }
+                NavigationLink(destination: ChooseRoleView(), isActive: $isNavigatingChooseRole) { EmptyView() }
+                NavigationLink(destination: ChatListView(), isActive: $isNavigatingChats) { EmptyView() }
             }
                 .edgesIgnoringSafeArea(.bottom)
+                .navigationViewStyle(StackNavigationViewStyle())
+                .navigationBarHidden(true)
                 .onAppear(perform: onAppear)
         }
     }
@@ -44,28 +51,23 @@ struct OnboardingView: View {
         }
 
         DispatchQueue.global().async {
-            self.addMessageInMain(.message("Hi and welcome to Breast Cancer Journey Companion."))
-            sleep(1)
 
-            self.addMessageInMain(.message("""
+            self.dialogViewModel.addMessageAsyncAnimated(.message("Hi and welcome to Breast Cancer Journey Companion."))
+            
+            sleep(1)
+            self.dialogViewModel.addMessageAsyncAnimated(
+                .message("""
                          We want to provide you with a 24/7 
                          community of survivors at different stages 
                          in their journey to support you along yours. 
-                         """))
+                         """)
+                )
+            
             sleep(1)
-            self.addMessageInMain(.message("Now let’s get you connected!"))
+            self.dialogViewModel.addMessageAsyncAnimated(.message("Now let’s get you connected!"))
 
             sleep(1)
             self.showLoginOptions()
-        }
-    }
-
-    private func addMessageInMain(_ message: MessageViewModel) {
-        DispatchQueue.main.async {
-
-            withAnimation(.easeInOut(duration: self.animationTime)) {
-                self.dialogViewModel.messages.append(message)
-            }
         }
     }
 
@@ -77,7 +79,11 @@ struct OnboardingView: View {
         }
     }
 
-    private func showChats(_: MessageViewModel) {
-        self.isShowingChats = true
+    private func navigateChooseRole() {
+        isNavigatingChooseRole = true
+    }
+
+    private func navigateChats() {
+        isNavigatingChats = true
     }
 }

@@ -9,8 +9,10 @@
 /* Begin PBXBuildFile section */
 		BCE4804BA96FFF8073F5F5E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4839EB1F176B35B57792B /* AppDelegate.swift */; };
 		BCE4807A90054E00124CC559 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4846E5D95BC231C03581C /* ChatListView.swift */; };
+		BCE48146EBF99CE58519D7FE /* ChooseTypeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48FBE10BFE9CF6B157052 /* ChooseTypeView.swift */; };
 		BCE481BC98F1167061375BDD /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48BFA7A8704D9D58F38D9 /* OnboardingView.swift */; };
 		BCE48228E2D3FEAE0AC8492C /* Color+Design.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE485E070BF4B162FC26421 /* Color+Design.swift */; };
+		BCE4827C8E20859A1611511E /* ChooseStageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE482DD4FBA68CA2DA5605D /* ChooseStageView.swift */; };
 		BCE483DBB25399EB31D79DE2 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48D628B15B7F4DD45EC22 /* InputField.swift */; };
 		BCE483E569A0F2B53427C702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE48EED6D8172E86C0A835C /* LaunchScreen.storyboard */; };
 		BCE484846BCC956414FE690D /* View+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48C5CACACA0A004A5BF07 /* View+LoadingView.swift */; };
@@ -49,6 +51,7 @@
 		BCE480370D863479921DCBF5 /* OptionMessageButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionMessageButton.swift; sourceTree = "<group>"; };
 		BCE481E34B2C195FBE4F83A0 /* MessageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		BCE481F71D3C6D0DA298A85F /* CGFloat+Dimensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+Dimensions.swift"; sourceTree = "<group>"; };
+		BCE482DD4FBA68CA2DA5605D /* ChooseStageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseStageView.swift; sourceTree = "<group>"; };
 		BCE4839EB1F176B35B57792B /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BCE4846E5D95BC231C03581C /* ChatListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		BCE48593D8FCB0200EEB3D06 /* LoginOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsView.swift; sourceTree = "<group>"; };
@@ -69,6 +72,7 @@
 		BCE48E84E3702408A76A7AF2 /* DialogViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DialogViewModel.swift; sourceTree = "<group>"; };
 		BCE48EED6D8172E86C0A835C /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BCE48F31F012EBB48748C6E7 /* Colors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		BCE48FBE10BFE9CF6B157052 /* ChooseTypeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChooseTypeView.swift; sourceTree = "<group>"; };
 		FB1426082523392800E45425 /* PinkAndBlue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PinkAndBlue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB1426142523392B00E45425 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		FB14261E2523392B00E45425 /* PinkAndBlueTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PinkAndBlueTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -176,6 +180,8 @@
 				BCE48BFA7A8704D9D58F38D9 /* OnboardingView.swift */,
 				BCE489824FCFEF00F79FC1F1 /* ChooseRoleView.swift */,
 				BCE48593D8FCB0200EEB3D06 /* LoginOptionsView.swift */,
+				BCE482DD4FBA68CA2DA5605D /* ChooseStageView.swift */,
+				BCE48FBE10BFE9CF6B157052 /* ChooseTypeView.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -347,6 +353,8 @@
 				BCE48860256138C90704DD18 /* ChooseRoleView.swift in Sources */,
 				BCE48EE1324CEC7F74471865 /* LoginOptionsView.swift in Sources */,
 				BCE48228E2D3FEAE0AC8492C /* Color+Design.swift in Sources */,
+				BCE4827C8E20859A1611511E /* ChooseStageView.swift in Sources */,
+				BCE48146EBF99CE58519D7FE /* ChooseTypeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
