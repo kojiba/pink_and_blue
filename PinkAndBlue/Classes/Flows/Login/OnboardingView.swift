@@ -8,6 +8,8 @@ import SwiftUI
 struct OnboardingView: View {
 
     @State var isShowingChats = false
+    @State var isShowingLoginOptionsView = false
+
     @ObservedObject var dialogViewModel = DialogViewModel(messages: [])
 
     let animationTime = 0.2
@@ -17,14 +19,26 @@ struct OnboardingView: View {
             VStack {
                 DialogView(viewModel: dialogViewModel)
 
+                if isShowingLoginOptionsView {
+
+                    VStack {
+                        Spacer(minLength: .spacing)
+
+                        LoginOptionsView(facebook: {},
+                            twitter: {},
+                            signInUp: {})
+                    }
+                        .transition(.move(edge: .bottom))
+                }
+
                 NavigationLink(destination: ChatListView(), isActive: $isShowingChats) { EmptyView() }
             }
+                .edgesIgnoringSafeArea(.bottom)
                 .onAppear(perform: onAppear)
         }
     }
 
     private func onAppear() {
-
         if self.dialogViewModel.messages.count > 0 {
             return
         }
@@ -42,12 +56,7 @@ struct OnboardingView: View {
             self.addMessageInMain(.message("Now let’s get you connected!"))
 
             sleep(1)
-            self.addMessagesInMain([
-                .option("Option one", action: self.showChats), 
-                .option("Option two", action: self.showChats), 
-                .option("Option three", action: self.showChats)
-            ])
-
+            self.showLoginOptions()
         }
     }
 
@@ -60,10 +69,10 @@ struct OnboardingView: View {
         }
     }
 
-    private func addMessagesInMain(_ messages: [MessageViewModel]) {
+    private func showLoginOptions() {
         DispatchQueue.main.async {
             withAnimation(.easeInOut(duration: self.animationTime)) {
-                self.dialogViewModel.messages.append(contentsOf: messages)
+                self.isShowingLoginOptionsView = true
             }
         }
     }
