@@ -15,11 +15,12 @@ struct ChooseTypeView: View {
 
     var body: some View {
         VStack {
-//            ScrollView {
-//                VStack {
-                    DialogView(viewModel: dialogViewModel)
-//                }
-//            }
+            if dialogViewModel.messages.count > 0 {
+                ScrollView {
+                    DialogView(viewModel: self.dialogViewModel)
+                }
+                    .edgesIgnoringSafeArea(.bottom)
+            }
 
             NavigationLink(destination: ChooseStageView(), isActive: $isNavigatingNext) {
                 EmptyView()

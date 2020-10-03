@@ -18,15 +18,20 @@ class DialogViewModel: ObservableObject {
     }
 
     func addMessageAsyncAnimated(_ message: MessageViewModel) {
-        add(message: message, async: true)
+        add(message: message, animated: true, async: true)
     }
 
-    func add(message: MessageViewModel, animated: Bool = true, async: Bool = false, animationTime: Double = animationTime) {
+
+    func addMessagesAsyncAnimated(_ messages: [MessageViewModel]) {
+        add(messages: messages, animated: true, async: true)
+    }
+
+    func add(message: MessageViewModel, animated: Bool = false, async: Bool = false, animationTime: Double = animationTime) {
         let closure = { self.messages.append(message) }
         performOperation(closure: closure, animated: animated, async: async, animationTime: animationTime)
     }
 
-    func add(messages: [MessageViewModel], animated: Bool = true, async: Bool = false, animationTime: Double = animationTime) {
+    func add(messages: [MessageViewModel], animated: Bool = false, async: Bool = false, animationTime: Double = animationTime) {
         let closure = { self.messages.append(contentsOf: messages) }
         performOperation(closure: closure, animated: animated, async: async, animationTime: animationTime)
     }

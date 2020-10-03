@@ -6,7 +6,7 @@
 import SwiftUI
 
 struct ChooseRoleView: View {
-    
+
     @ObservedObject var dialogViewModel = DialogViewModel(messages: [])
 
     @State private var isNavigatingNext = false
@@ -24,7 +24,7 @@ struct ChooseRoleView: View {
             .navigationBarTitle("Choose Role", displayMode: .inline)
             .onAppear(perform: onAppear)
     }
-    
+
     private func onAppear() {
 
         if self.dialogViewModel.messages.count > 0 {
@@ -33,15 +33,14 @@ struct ChooseRoleView: View {
 
         DispatchQueue.global().async {
             self.dialogViewModel.addMessageAsyncAnimated(.message("How are you related to the breast cancer?"))
-            
+
             sleep(1)
-            self.self.dialogViewModel.add(messages: [
+            self.self.dialogViewModel.addMessagesAsyncAnimated([
                 .option("I was recently diagnosed", action: self.showChats),
                 .option("Someone I love has breast cancer/I’m a caregiver", action: self.showChats),
                 .option("I have been living with breast cancer", action: self.showChats),
                 .option("My cancer is in remission", action: self.showChats)
-            ],
-                async: true)
+            ])
 
         }
     }

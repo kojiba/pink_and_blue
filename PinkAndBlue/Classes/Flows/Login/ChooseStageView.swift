@@ -35,13 +35,12 @@ struct ChooseStageView: View {
             self.dialogViewModel.addMessageAsyncAnimated(.message("What is the current stage?"))
 
             sleep(1)
-            self.dialogViewModel.add(messages: [
+            self.dialogViewModel.addMessagesAsyncAnimated([
                 .option("First stage (I)", action: self.showNext),
                 .option("Second stage (II)", action: self.showNext),
                 .option("Third stage (III)", action: self.showNext),
                 .option("Fourth stage (IV)", action: self.showNext)
-            ],
-                async: true)
+            ])
 
         }
     }
