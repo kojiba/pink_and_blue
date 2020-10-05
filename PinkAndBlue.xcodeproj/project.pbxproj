@@ -56,6 +56,7 @@
 		BCE48593D8FCB0200EEB3D06 /* LoginOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsView.swift; sourceTree = "<group>"; };
 		BCE485E070BF4B162FC26421 /* Color+Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Design.swift"; sourceTree = "<group>"; };
 		BCE486237FF5D82A13539BA0 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		BCE486580392D6F6785ED170 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		BCE486850841E48087452FF1 /* ChatItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItemView.swift; sourceTree = "<group>"; };
 		BCE4874E5326B25D2A0E705A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BCE4895119EB02B39A5F916C /* MessageViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageViewModel.swift; sourceTree = "<group>"; };
@@ -189,6 +190,7 @@
 				FB14260A2523392800E45425 /* PinkAndBlue */,
 				FB1426212523392B00E45425 /* PinkAndBlueTests */,
 				FB1426092523392800E45425 /* Products */,
+				BCE486580392D6F6785ED170 /* README.md */,
 			);
 			sourceTree = "<group>";
 		};
