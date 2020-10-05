@@ -16,7 +16,6 @@
 		BCE483DBB25399EB31D79DE2 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48D628B15B7F4DD45EC22 /* InputField.swift */; };
 		BCE483E569A0F2B53427C702 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BCE48EED6D8172E86C0A835C /* LaunchScreen.storyboard */; };
 		BCE484846BCC956414FE690D /* View+LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48C5CACACA0A004A5BF07 /* View+LoadingView.swift */; };
-		BCE485740D4FF0A283F34891 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48617C46630D90396E621 /* Mocks.swift */; };
 		BCE4868655DE74A7F404473E /* OptionMessageButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE480370D863479921DCBF5 /* OptionMessageButton.swift */; };
 		BCE48713CD5DD7CBEF1D806C /* MessageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE4895119EB02B39A5F916C /* MessageViewModel.swift */; };
 		BCE487DA58A148E2AF059106 /* ErrorText.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCE48D8E23F82438E00BBD4B /* ErrorText.swift */; };
@@ -56,7 +55,6 @@
 		BCE4846E5D95BC231C03581C /* ChatListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		BCE48593D8FCB0200EEB3D06 /* LoginOptionsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginOptionsView.swift; sourceTree = "<group>"; };
 		BCE485E070BF4B162FC26421 /* Color+Design.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Color+Design.swift"; sourceTree = "<group>"; };
-		BCE48617C46630D90396E621 /* Mocks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
 		BCE486237FF5D82A13539BA0 /* LoginView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		BCE486850841E48087452FF1 /* ChatItemView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatItemView.swift; sourceTree = "<group>"; };
 		BCE4874E5326B25D2A0E705A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -167,7 +165,6 @@
 		BCE48A113E1D1924EDC659CF /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				BCE48617C46630D90396E621 /* Mocks.swift */,
 				BCE4899A822789C1BDA3654C /* Network.swift */,
 			);
 			path = Network;
@@ -338,7 +335,6 @@
 				BCE487DA58A148E2AF059106 /* ErrorText.swift in Sources */,
 				BCE483DBB25399EB31D79DE2 /* InputField.swift in Sources */,
 				BCE484846BCC956414FE690D /* View+LoadingView.swift in Sources */,
-				BCE485740D4FF0A283F34891 /* Mocks.swift in Sources */,
 				BCE48DCA411446F74773A7CE /* Network.swift in Sources */,
 				BCE48BF005301D9788DE0165 /* CGFloat+Dimensions.swift in Sources */,
 				BCE48B4EFB0289AA87BB06E4 /* DialogView.swift in Sources */,
@@ -504,7 +500,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.PinkAndBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kojiba.PinkAndBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -524,7 +520,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.PinkAndBlue;
+				PRODUCT_BUNDLE_IDENTIFIER = com.kojiba.PinkAndBlue;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

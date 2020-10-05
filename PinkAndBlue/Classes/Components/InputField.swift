@@ -1,6 +1,6 @@
 //
-// Created by kojiba on 15.08.2020.
-// Copyright (c) 2020 kojiba. All rights reserved.
+// Created by Illia Kucheriavyi
+// For PinkAndBlue Team Hackathon
 //
 
 import SwiftUI

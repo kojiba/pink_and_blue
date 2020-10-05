@@ -1,9 +1,6 @@
 //
-//  SceneDelegate.swift
-//  PinkAndBlue
-//
-//  Created by kojiba on 29.09.2020.
-//  Copyright © 2020 PinkAndBlue. All rights reserved.
+// Created by Illia Kucheriavyi
+// For PinkAndBlue Team Hackathon
 //
 
 import UIKit

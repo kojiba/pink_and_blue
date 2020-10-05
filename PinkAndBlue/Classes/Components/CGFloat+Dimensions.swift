@@ -1,3 +1,7 @@
+//
+// Created by Illia Kucheriavyi
+// For PinkAndBlue Team Hackathon
+//
 
 import SwiftUI
 
